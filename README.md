@@ -1,1 +1,1 @@
-# A repository containing the small projects from The-Odin-Project-JavaScript Curriculum
+# A repository containing small projects from The-Odin-Project-JavaScript Curriculum
