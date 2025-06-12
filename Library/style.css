@@ -1,3 +1,31 @@
 *{
+   box-sizing: border-box;
+   
 
 }
+.container{
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;  
+    align-items: center;
+}
+
+.book{
+  
+    background-color: aqua;
+    height: 200px;
+    border-radius: 10px;
+    place-items: center;
+    
+}
+
+.new{
+    display: grid;
+    justify-self: end;
+    width: 70px;
+    height: 50px;
+    align-items: center;
+    margin: 20px;
+    
+   }
