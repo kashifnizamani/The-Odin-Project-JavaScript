@@ -54,11 +54,13 @@
    }
 
   input[type = "radio"]{
-             
-              
-              background: red;
-              width: 10px;
-  height: 10px;
+   
+    position: absolute;
+    border: 1px solid white;
+    width: 20px;
+    height: 20px;border-radius: 100px;
+    padding: 0;
+    left: 50px;
     
   }
 
@@ -74,4 +76,28 @@ textarea {
     
 
     backdrop-filter: blur(5px);
+}
+
+.submit{
+    width: 100px;
+    justify-self: center;
+    background-color: #6ab5ff;
+    border-radius: 10px;
+    font-weight: bolder;
+}
+
+form {
+    font-weight: bolder;
+    color: white;
+
+}
+.addbook{
+    background-color: rgba(0, 0, 0, 0.6);
+
+}
+
+input[type = "radio"]:checked{
+
+    background-color: blue;
+
 }
