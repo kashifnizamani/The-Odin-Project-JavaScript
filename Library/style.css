@@ -101,3 +101,16 @@ input[type = "radio"]:checked{
     background-color: blue;
 
 }
+
+.remove{
+    display: grid;
+    width: 20px;
+    height: 20px;
+    place-self: start;
+    align-self: start;
+    place-content: center;
+    background-color: inherit;
+    border: none;
+    margin-left: 10px;
+    
+}

@@ -32,8 +32,21 @@ function Book(name, author, no_of_pages, isRead){
 
         const div = document.createElement("div");
         div.classList.add("book");
+        div.setAttribute("data-id", library[i].id);
+        const removebookbtn = document.createElement("button");
+        removebookbtn.textContent = "X";
+        removebookbtn.classList.add("remove");
         div.innerHTML = "<h1>" + library[i].name + "</h1> by " + library[i].author + "<br> <br>pages: " + library[i].no_of_pages;
+        div.appendChild(removebookbtn);
         container.appendChild(div);
+
+        removebookbtn.addEventListener("click", ()=>{
+            const removedDiv = removebookbtn.parentNode;
+             const divID = removedDiv.getAttribute("data-id");
+             if(library[i].id === divID)
+                removedDiv.remove();
+        })
+
     }
     calls++;
     }
@@ -41,10 +54,20 @@ function Book(name, author, no_of_pages, isRead){
        let i = library.length - 1;
        const div = document.createElement("div");
         div.classList.add("book");
+        div.setAttribute("data-id", library[i].id);
+        const removebookbtn = document.createElement("button");
+        removebookbtn.textContent = "X";
+        removebookbtn.classList.add("remove");
         div.innerHTML = "<h1>" + library[i].name + "</h1> by " + library[i].author + "<br> <br>pages: " + library[i].no_of_pages;
+        div.appendChild(removebookbtn);
         container.appendChild(div);
+
         calls++;
     }
+  
+
+    
+  
     
  }
  displayBooks();
@@ -85,5 +108,7 @@ closeButton.addEventListener("click", ()=> {
 
   });
   
-   
+  
+
+
   
