@@ -12,7 +12,34 @@
     <div class="container">
 
         <h1 class="heading">My Shelf</h1>
-        <button class="new">+</button>
+        <button class="newBook">+</button>
     </div>
+
+    <dialog>
+        <button class="closeButton">X</button>
+        <form action="#" method="dialog">
+
+            <label for="name" >Name:</label>
+            <input type="text" name="name" id="name">
+
+            <label for="author">Written by:</label>
+            <input type="text" name="author" id="author">
+            <label for="pages">NO.of Pages:</label>
+            <input type="number" name="no_of_pages" id="pages">
+            <span>Have you read it?</span>
+            <label for="isRead">Yes: 
+                <input type="radio" name="isRead" id="isRead" >
+            </label>
+           
+            <label for="isnotRead">No:  
+                 <input type="radio" name="isRead" id="isRead" >
+                </label>
+            
+
+            <button class="submit">submit</button>
+            
+            
+        </form>
+    </dialog>
 </body>
 </html>

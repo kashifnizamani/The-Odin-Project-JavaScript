@@ -1,6 +1,7 @@
 *{
    box-sizing: border-box;
    
+   
 
 }
 .container{
@@ -8,7 +9,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;  
-    align-items: center;
+    
+    
 }
 
 .book{
@@ -20,8 +22,7 @@
     
 }
 
-.new{
-    display: grid;
+.newBook{
     justify-self: end;
     width: 70px;
     height: 50px;
@@ -29,3 +30,48 @@
     margin: 20px;
     
    }
+   div{
+    font-size: 20px;
+   }
+   form{
+    width: 300px;
+    display: grid;
+    grid-template-columns: 1fr ;
+    gap: 10px;
+    
+
+
+   }
+
+   input{
+
+    border-radius: 5px;
+   }
+
+   dialog{
+
+    border-radius: 10px;
+   }
+
+  input[type = "radio"]{
+             
+              
+              background: red;
+              width: 10px;
+  height: 10px;
+    
+  }
+
+  button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+::backdrop{
+    
+
+    backdrop-filter: blur(5px);
+}

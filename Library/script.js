@@ -15,7 +15,7 @@ function Book(name, author, no_of_pages, isRead){
     library.push(book);
  }
 
- addBooktoLibrary("Lord of the Rings", " J.R.R Tolkien", 300, false);
+ addBooktoLibrary("Lord of the Rings", " J.R.R Tolkien", 600, false);
  addBooktoLibrary("1984", "George Orwell", 425, true);
  addBooktoLibrary("Shadow of the Wind", "Carlos Luis Zafon", 350, true)
 
@@ -29,7 +29,7 @@ function Book(name, author, no_of_pages, isRead){
 
         const div = document.createElement("div");
         div.classList.add("book");
-        div.innerHTML = "<h1>" + library[i].name + "</h1> by " + library[i].author + ". pages: " + library[i].no_of_pages;
+        div.innerHTML = "<h1>" + library[i].name + "</h1> by " + library[i].author + "<br> pages: " + library[i].no_of_pages;
         
 
         container.appendChild(div);
@@ -39,3 +39,15 @@ function Book(name, author, no_of_pages, isRead){
  }
 
  displayBooks();
+const dialog = document.querySelector("dialog");
+const newbook = document.querySelector(".newBook");
+const closeButton = document.querySelector(".closeButton");
+
+newbook.addEventListener("click", ()=>{
+    
+    dialog.showModal();
+})
+
+closeButton.addEventListener("click", ()=> {
+    dialog.close();
+})
