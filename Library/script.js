@@ -21,6 +21,16 @@ function Book(name, author, no_of_pages, isRead){
  addBooktoLibrary("1984", "George Orwell", 425, true);
  addBooktoLibrary("Shadow of the Wind", "Carlos Luis Zafon", 350, true)
 
+ Book.prototype.toggleReadBtn = function(){
+
+    if(this.isRead)
+       this.isRead = false;
+    else 
+      this.isRead = true;
+    return this.isRead;
+    
+
+  }
  
  const container = document.querySelector(".container")
  let calls  = 1;
@@ -33,19 +43,42 @@ function Book(name, author, no_of_pages, isRead){
         const div = document.createElement("div");
         div.classList.add("book");
         div.setAttribute("data-id", library[i].id);
+
         const removebookbtn = document.createElement("button");
         removebookbtn.textContent = "X";
         removebookbtn.classList.add("remove");
-        div.innerHTML = "<h1>" + library[i].name + "</h1> by " + library[i].author + "<br> <br>pages: " + library[i].no_of_pages;
-        div.appendChild(removebookbtn);
+
+        const togglebtn = document.createElement("button");
+        togglebtn.textContent = (library[i].isRead)? "Read" : "Not Read";
+        togglebtn.classList.add("toggle")
+        
+        const btncontainer = document.createElement("div");
+        btncontainer.classList.add("btnContainer");
+
+        div.innerHTML = "<h1>" + library[i].name + "</h1> by " + library[i].author + "<br> <br>pages: " + library[i].no_of_pages + "<br>";
+        
+        btncontainer.appendChild(removebookbtn);
+        btncontainer.appendChild(togglebtn);
+        div.appendChild(btncontainer);
         container.appendChild(div);
 
         removebookbtn.addEventListener("click", ()=>{
-            const removedDiv = removebookbtn.parentNode;
+            const removedDiv = removebookbtn.parentNode.parentNode;
              const divID = removedDiv.getAttribute("data-id");
              if(library[i].id === divID)
                 removedDiv.remove();
         })
+
+        togglebtn.addEventListener("click", ()=>{
+           
+            if(library[i].toggleReadBtn())
+                togglebtn.textContent = "Read";
+            else
+                togglebtn.textContent = "Not Read";
+            
+            
+        });
+
 
     }
     calls++;
@@ -55,12 +88,43 @@ function Book(name, author, no_of_pages, isRead){
        const div = document.createElement("div");
         div.classList.add("book");
         div.setAttribute("data-id", library[i].id);
+
         const removebookbtn = document.createElement("button");
         removebookbtn.textContent = "X";
         removebookbtn.classList.add("remove");
-        div.innerHTML = "<h1>" + library[i].name + "</h1> by " + library[i].author + "<br> <br>pages: " + library[i].no_of_pages;
-        div.appendChild(removebookbtn);
+        
+        const togglebtn = document.createElement("button");
+        togglebtn.textContent = (library[i].isRead)? "Read" : "Not Read";
+        togglebtn.classList.add("toggle")
+        
+        const btncontainer = document.createElement("div");
+        btncontainer.classList.add("btnContainer");
+
+        div.innerHTML = "<h1>" + library[i].name + "</h1> by " + library[i].author + "<br> <br>pages: " + library[i].no_of_pages + "<br>";
+        
+        btncontainer.appendChild(removebookbtn);
+        btncontainer.appendChild(togglebtn);
+        div.appendChild(btncontainer);
         container.appendChild(div);
+
+        removebookbtn.addEventListener("click", ()=>{
+            const removedDiv = removebookbtn.parentNode.parentNode;
+             const divID = removedDiv.getAttribute("data-id");
+             if(library[i].id === divID)
+                removedDiv.remove();
+    
+        })
+
+        togglebtn.addEventListener("click", ()=>{
+           
+            if(library[i].toggleReadBtn())
+                togglebtn.textContent = "Read";
+            else
+                togglebtn.textContent = "Not Read";
+            
+            
+        });
+
 
         calls++;
     }
@@ -107,8 +171,10 @@ closeButton.addEventListener("click", ()=> {
      displayBooks();
 
   });
+
+  
   
   
 
 
-  
+ 

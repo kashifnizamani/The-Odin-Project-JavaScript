@@ -14,9 +14,10 @@
 }
 
 .book{
-  
+     display: grid;
+     grid-template-columns: (auto-fit, 1fr) ;
     background-color: aqua;
-    height: 200px;
+    height:  250px;
     border-radius: 10px;
     place-items: center;
     
@@ -103,14 +104,30 @@ input[type = "radio"]:checked{
 }
 
 .remove{
-    display: grid;
+   
     width: 20px;
     height: 20px;
-    place-self: start;
-    align-self: start;
-    place-content: center;
     background-color: inherit;
     border: none;
-    margin-left: 10px;
+    justify-self: start;
+    
+   
     
 }
+
+.btnContainer{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+.toggle{
+    width: fit-content;
+    justify-self: end;
+    margin-right: 10px;
+    background-color: inherit;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
