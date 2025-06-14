@@ -1,8 +1,5 @@
 *{
    box-sizing: border-box;
-   
-   
-
 }
 .container{
 
@@ -16,7 +13,7 @@
 .book{
      display: grid;
      grid-template-columns: (auto-fit, 1fr) ;
-    background-color: aqua;
+    background-color: wheat;
     height:  250px;
     border-radius: 10px;
     place-items: center;
@@ -126,8 +123,9 @@ input[type = "radio"]:checked{
     width: fit-content;
     justify-self: end;
     margin-right: 10px;
-    background-color: inherit;
+    background-color: white;
     border: 1px solid black;
     border-radius: 5px;
 }
+
 

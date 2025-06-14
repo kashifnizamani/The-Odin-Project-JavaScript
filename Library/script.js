@@ -1,3 +1,9 @@
+const container = document.querySelector(".container")
+const dialog = document.querySelector(".addbook");
+const newbook = document.querySelector(".newBook");
+const closeButton = document.querySelector(".closeButton");
+const submitButton = document.querySelector(".submit");
+
 const library = [];
 
 function Book(name, author, no_of_pages, isRead){
@@ -32,7 +38,7 @@ function Book(name, author, no_of_pages, isRead){
 
   }
  
- const container = document.querySelector(".container")
+ 
  let calls  = 1;
  function displayBooks(){
 
@@ -137,10 +143,7 @@ function Book(name, author, no_of_pages, isRead){
  displayBooks();
 
  
-const dialog = document.querySelector(".addbook");
-const newbook = document.querySelector(".newBook");
-const closeButton = document.querySelector(".closeButton");
-const submitButton = document.querySelector(".submit")
+
 
 
 newbook.addEventListener("click", ()=>{
@@ -172,9 +175,3 @@ closeButton.addEventListener("click", ()=> {
 
   });
 
-  
-  
-  
-
-
- 
