@@ -13,6 +13,7 @@
     height: 90vh;
     margin: auto;
     padding: 20px;
+    
 
 }
 
@@ -47,3 +48,20 @@ button{
 }
 
 
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dots{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.dot.active{
+    background-color: black;
+}
+ 
