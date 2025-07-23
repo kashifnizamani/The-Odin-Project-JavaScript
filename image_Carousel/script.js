@@ -24,11 +24,11 @@ div.appendChild(image);
 function next(){
 
     
-   const imgNO =  image.getAttribute("id");
+   let imgNO =  image.getAttribute("id");
    if(imgNO == 4){
-    return;
+       imgNO = 0;
    }
-   else{
+  
 
 
    div.innerHTML = "";
@@ -38,7 +38,7 @@ function next(){
    div.appendChild(left);
    div.appendChild(right);
    div.appendChild(image);
-   }
+   
 
 }
 
@@ -47,11 +47,11 @@ function next(){
 function previous(){
 
     
-   const imgNO =  image.getAttribute("id");
+   let imgNO =  image.getAttribute("id");
    if(imgNO == 1){
-    return;
+      imgNO = 5;
    }
-   else{
+   
 
 
    div.innerHTML = "";
@@ -62,7 +62,7 @@ function previous(){
    div.appendChild(left);
    div.appendChild(right);
    div.appendChild(image);
-   }
+   
 
 }
 
@@ -93,3 +93,5 @@ dots.forEach(dot => {
 
     })
 })
+
+setInterval(next, 5000);
