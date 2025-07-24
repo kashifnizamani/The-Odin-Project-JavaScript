@@ -1,67 +1,57 @@
-*{
-   box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
-.container{
-
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;  
-    
-    
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
 }
 
-.book{
-     display: grid;
-     grid-template-columns: (auto-fit, 1fr) ;
-    background-color: wheat;
-    height:  250px;
-    border-radius: 10px;
-    place-items: center;
-    
+.book {
+  display: grid;
+  grid-template-columns: (auto-fit, 1fr);
+  background-color: wheat;
+  height: 250px;
+  border-radius: 10px;
+  place-items: center;
 }
 
-.newBook{
-    justify-self: end;
-    width: 70px;
-    height: 50px;
-    align-items: center;
-    margin: 20px;
-    
-   }
-   div{
-    font-size: 20px;
-   }
-   form{
-    width: 300px;
-    display: grid;
-    grid-template-columns: 1fr ;
-    gap: 10px;
+.newBook {
+  justify-self: end;
+  width: 70px;
+  height: 50px;
+  align-items: center;
+  margin: 20px;
+}
+div {
+  font-size: 20px;
+}
+form {
+  width: 300px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
 
+input {
+  border-radius: 5px;
+}
 
-   }
+dialog {
+  border-radius: 10px;
+}
 
-   input{
+input[type="radio"] {
+  position: absolute;
+  border: 1px solid white;
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  padding: 0;
+  left: 50px;
+}
 
-    border-radius: 5px;
-   }
-
-   dialog{
-
-    border-radius: 10px;
-   }
-
-  input[type = "radio"]{
-   
-    position: absolute;
-    border: 1px solid white;
-    width: 20px;
-    height: 20px;border-radius: 100px;
-    padding: 0;
-    left: 50px;
-    
-  }
-
-  button,
+button,
 input,
 select,
 textarea {
@@ -69,62 +59,49 @@ textarea {
   font-size: 100%;
 }
 
-::backdrop{
-    
-
-    backdrop-filter: blur(5px);
+::backdrop {
+  backdrop-filter: blur(5px);
 }
 
-.submit{
-    width: 100px;
-    justify-self: center;
-    background-color: #6ab5ff;
-    border-radius: 10px;
-    font-weight: bolder;
+.submit {
+  width: 100px;
+  justify-self: center;
+  background-color: #6ab5ff;
+  border-radius: 10px;
+  font-weight: bolder;
 }
 
 form {
-    font-weight: bolder;
-    color: white;
-
+  font-weight: bolder;
+  color: white;
 }
-.addbook{
-    background-color: rgba(0, 0, 0, 0.6);
-
+.addbook {
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
-input[type = "radio"]:checked{
-
-    background-color: blue;
-
+input[type="radio"]:checked {
+  background-color: blue;
 }
 
-.remove{
-   
-    width: 20px;
-    height: 20px;
+.remove {
+  width: 20px;
+  height: 20px;
 
-    border: none;
-    justify-self: start;
-    
-   
-    
+  border: none;
+  justify-self: start;
 }
 
-.btnContainer{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    
+.btnContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-.toggle{
-    width: fit-content;
-    justify-self: end;
-    margin-right: 10px;
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 5px;
+.toggle {
+  width: fit-content;
+  justify-self: end;
+  margin-right: 10px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
 }
-
-
