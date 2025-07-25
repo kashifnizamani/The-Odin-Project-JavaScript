@@ -24,6 +24,7 @@ input{
     border-radius: 10px;
     border: 1px solid black;
     padding: 5px;
+
 }
 
 .submit{
@@ -31,4 +32,31 @@ input{
     justify-self: center;
     border-radius: 10px;
     border: 1px solid black;
+}
+
+.error{
+
+     width: 100%;
+  padding: 0;
+
+
+  font-size: 80%;
+  color: white;
+  background-color: #900;
+  border-radius: 0 0 5px 5px;
+    
+}
+
+.error.active{
+    padding: 10px;
+    gap: 10px;
+}
+
+input:valid{
+
+    border: 1px solid blue;
+}
+
+input:invalid{
+    border: 1px solid red;
 }
