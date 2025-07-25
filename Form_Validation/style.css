@@ -1,62 +1,50 @@
-*{
-    font-family: 'Times New Roman', Times, serif;
-    box-sizing: border-box;
+* {
+  font-family: "Times New Roman", Times, serif;
+  box-sizing: border-box;
 }
 
-form{
-    display: grid;
-    grid-auto-flow: row;
-    width: fit-content;
-    border: 1px solid black;
-    place-self: center;
-    margin-top: 50px;
-    padding: 50px;
-    gap: 10px;
-     
+form {
+  display: grid;
+  grid-auto-flow: row;
+  width: fit-content;
 
-
-
-    
+  place-self: center;
+  margin: 50px;
+  gap: 10px;
 }
 
-input{
-    width: 100%;
-    border-radius: 10px;
-    border: 1px solid black;
-    padding: 5px;
-
+input {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 5px;
 }
 
-.submit{
-    width: 100px;
-    justify-self: center;
-    border-radius: 10px;
-    border: 1px solid black;
+.submit {
+  width: 100px;
+  justify-self: center;
+  border-radius: 10px;
+  border: 1px solid black;
 }
 
-.error{
-
-     width: 100%;
-  padding: 0;
-
+.error {
+  width: 100%;
 
   font-size: 80%;
   color: white;
   background-color: #900;
-  border-radius: 0 0 5px 5px;
-    
+  border-radius: 10px;
 }
 
-.error.active{
-    padding: 10px;
-    gap: 10px;
+.error.active {
+  padding: 5px;
+  margin-top: 10px;
 }
 
-input:valid{
-
-    border: 1px solid blue;
+input:valid {
+  border: 1px solid blue;
 }
 
-input:invalid{
-    border: 1px solid red;
+input:invalid {
+  border: 1px solid red;
 }

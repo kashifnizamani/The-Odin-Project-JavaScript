@@ -1,49 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-</head>
-<body>
-
+  </head>
+  <body>
     <div class="container">
+      <form action="#" class="form" novalidate>
+        <label for="mail">
+          Email:
+          <input type="email" id="mail" minlength="8" maxlength="25" required />
+          <span class="error"></span>
+        </label>
 
-        <form action="#" class="form" novalidate>
-            <label for="mail"> Email:
-            <input type="email" id="mail" minlength="8" maxlength="25" required >
-            <span class="error"></span>
-            </label>
+        <label for="country"
+          >Country:
+          <input type="text" id="country" required />
+          <span class="error"></span>
+        </label>
 
-             <label for="country">Country:
-            <input type="text" id="country" required >
-            <span class="error"></span>
-            </label>
+        <label for="code">
+          Postal Code:
+          <input type="text" id="code" minlength="5" maxlength="8" required />
+          <span class="error"></span>
+        </label>
 
-             <label for="code"> Postal Code:
-            <input type="number" id="code" minlength="5" maxlength="8" required >
-            <span class="error"></span>
-            </label>
+        <label for="password"
+          >Password:
+          <input
+            type="password"
+            id="password"
+            minlength="8"
+            maxlength="16"
+            required
+          />
+          <span class="error"></span>
+        </label>
 
-             <label for="password">Password:
-            <input type="password" id="password" minlength="8" maxlength="16" required >
-            <span class="error"></span>
-            </label>
+        <label for="passwordconfirm"
+          >Confirm Password:
+          <input
+            type="password"
+            id="passwordconfirm"
+            minlength="8"
+            maxlength="16"
+            required
+          />
+          <span class="error"></span>
+        </label>
 
-             <label for="passwordconfirm">Confirm Password:
-            <input type="password" id="passwordconfirm" minlength="8" maxlength="16" required >
-            <span class="error"></span>
-            </label>
-
-            <button class="submit"> Submit</button>
-
-        </form>
+        <button class="submit">Submit</button>
+      </form>
     </div>
-
-
-    
-</body>
+  </body>
 </html>
